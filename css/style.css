@@ -19,8 +19,9 @@
 body {
     background-color: var(--background-body-lightest);
     min-height: 100vh;
-    overflow-x: hidden;
 }
+
+/* cabecalho */
 
 header {
     position: absolute;
@@ -54,4 +55,54 @@ header {
 .navigation a.active{
     background-color: var(--background-body-darkest);
     color: white;
+}
+
+/* fim cabecalho */
+
+/* parallax */
+
+#parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#parallax-text {
+    position: absolute;
+    font-size: 5em;
+    color: var(--background-body-darkest);
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);   
+}
+
+#parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+    #parallax::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, var(--background-body-darkest), transparent);
+        z-index: 1000;
+    }
+
+/* fim parallax */
+
+.sec {
+    position: relative;
+    background-color: var(--background-body-darkest);
+    padding: 5em;
+
+    h2,p{
+        color: white;
+    }
 }
