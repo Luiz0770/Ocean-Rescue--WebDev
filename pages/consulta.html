@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH3</title>
+    <link rel="stylesheet" href="../css/consulta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container-consulta">
+        <section class="section-formulario">
+            <form class="container-formulario" data-form>
+                <!-- Input Nome da praia -->
+                <div class="container-inputs">
+                    <label for="Nome"><i class="fa-solid fa-pencil"></i> <strong>Digite o nome da praia:</strong></label>
+                    <input type="text" name="titulo" class="input-titulo" data-titulo placeholder="Qual é a praia que voce quer relatar?" required>
+                </div>
+                <!-- Select Nivel de poluicao -->
+                <div class="container-inputs">
+                    <label for="poluicao"><i class="fa-solid fa-list"></i> <strong>Nivel de poluição:</strong></label>
+                    <select name="poluicao" data-select>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Muito Alta">Muito Alta</option>
+                    </select>
+                </div>
+                <!-- Select Condicao da praia -->
+                <div class="container-inputs">
+                    <label for="condicao"><i class="fa-solid fa-list"></i> <strong>Condicao da praia:</strong></label>
+                    <select name="condicao" data-select>
+                        <option value="Normal">Normal</option>
+                        <option value="Boa">Boa</option>
+                        <option value="Ruim">Ruim</option>
+                    </select>
+                </div>
+                <!-- Select Qualidade das aguas -->
+                <div class="container-inputs">
+                    <label for="qualidade"><i class="fa-solid fa-list"></i> <strong>Qualidade da agua:</strong></label>
+                    <select name="qualidade" data-select>
+                        <option value="Boa">Boa</option>
+                        <option value="Ruim">Ruim</option>
+                        <option value="Muito Ruim">Muito Ruim</option>
+                    </select>
+                </div>
+                <!-- Input Imagem da praia -->
+                <div class="container-inputs">
+                    <label for="imagem1"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da praia(URL):</strong></label>
+                    <input type="text" name="imagem1" data-imagem placeholder="Insira a URL aqui" required>
+                </div>
+                <!-- Input Imagem da praia -->
+                <div class="container-inputs">
+                    <label for="imagem2"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da praia(URL):</strong></label>
+                    <input type="text" name="imagem2" data-imagem placeholder="Insira a URL aqui">
+                </div>
+                <!-- Input Imagem da praia -->
+                <div class="container-inputs">
+                    <label for="imagem3"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da praia (URL):</strong></label>
+                    <input type="text" name="imagem3" data-imagem placeholder="Insira a URL aqui">
+                </div>
+
+                <button type="submit" class="btn" data-button><i class="fa-solid fa-bullhorn"></i> Postar</button>
+            </form>
+        </section>
+
+
+        <section class="section-posts">
+            <div class="container-filter">
+            </div>
+            <div class="mostrar">
+                <div class="objeto-carrosel">
+                    <h2>Titulo</h2>
+                    <div class="carrosel">
+                        <button id="prev-img"><</button>
+                        <div class="container-carrosel">
+                            <div class="container-images" id="images">
+                                <img src="./imgs/1.gif" alt="">
+                                <img src="./imgs/2.png" alt="">
+                                <img src="./imgs/3.png" alt="">
+                            </div>
+                        </div>
+                        <button id="next-img">></button>
+                    </div>
+                    <p>Poluicao</p>
+                    <p>Condicao</p>
+                    <p>Qualidade</p>
+                    <p>Data</p>
+                    <div class="container-btns">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>>
+            </div>
+        </section>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>
