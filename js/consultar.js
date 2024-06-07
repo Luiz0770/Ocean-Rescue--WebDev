@@ -142,7 +142,7 @@ function criarElemento(objeto) {
     novaDivBtns.appendChild(btnEditar)
     
     btnEditar.addEventListener('click', () => {
-        atualizarTitulo(objeto.id)
+        atualizarNome(objeto.id)
     })
     
     //Btn Deletar
@@ -156,4 +156,21 @@ function criarElemento(objeto) {
     })
     
     return novoObjeto
+}
+
+function atualizarNome(id) {
+    const novoNome = prompt("Digite o novo da praia:");
+    
+    if (novoNome) {
+        const objeto = listaDeFeedBacks.find(objetoEncontrado => objetoEncontrado.id == id)
+        
+        if (objeto) {
+            objeto.nome = novoNome;
+            console.log(objeto.nome)
+            exibirNaTela(listaDeFeedBacks); 
+        }
+    }
+    else {
+        alert("Digite um texto válido!");
+    }
 }
