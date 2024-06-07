@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CH3</title>
+    <title>Ocean Rescue - Consulta Praia</title>
     <link rel="stylesheet" href="../css/consulta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -16,12 +16,12 @@
                 <!-- Input Nome da praia -->
                 <div class="container-inputs">
                     <label for="Nome"><i class="fa-solid fa-pencil"></i> <strong>Digite o nome da praia:</strong></label>
-                    <input type="text" name="titulo" class="input-titulo" data-titulo placeholder="Qual é a praia que voce quer relatar?" required>
+                    <input type="text" name="Nome" data-nome placeholder="Qual é a praia que voce quer relatar?" required>
                 </div>
                 <!-- Select Nivel de poluicao -->
                 <div class="container-inputs">
                     <label for="poluicao"><i class="fa-solid fa-list"></i> <strong>Nivel de poluição:</strong></label>
-                    <select name="poluicao" data-select>
+                    <select name="poluicao" data-poluicao>
                         <option value="Baixa">Baixa</option>
                         <option value="Alta">Alta</option>
                         <option value="Muito Alta">Muito Alta</option>
@@ -30,7 +30,7 @@
                 <!-- Select Condicao da praia -->
                 <div class="container-inputs">
                     <label for="condicao"><i class="fa-solid fa-list"></i> <strong>Condicao da praia:</strong></label>
-                    <select name="condicao" data-select>
+                    <select name="condicao" data-condicao>
                         <option value="Normal">Normal</option>
                         <option value="Boa">Boa</option>
                         <option value="Ruim">Ruim</option>
@@ -39,7 +39,7 @@
                 <!-- Select Qualidade das aguas -->
                 <div class="container-inputs">
                     <label for="qualidade"><i class="fa-solid fa-list"></i> <strong>Qualidade da agua:</strong></label>
-                    <select name="qualidade" data-select>
+                    <select name="qualidade" data-qualidade>
                         <option value="Boa">Boa</option>
                         <option value="Ruim">Ruim</option>
                         <option value="Muito Ruim">Muito Ruim</option>
@@ -95,7 +95,7 @@
             </div>
         </section>
     </div>
-    <script src="../script.js"></script>
+    <script src="../js/consultar.js"></script>
 </body>
 
 </html>
