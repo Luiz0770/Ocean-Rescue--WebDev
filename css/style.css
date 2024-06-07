@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
 }
@@ -69,9 +73,11 @@ header {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    background-color: var(--background-body-lightest);
 }
 
 #parallax-text {
+    text-align: center;
     position: absolute;
     font-size: 5em;
     color: var(--background-body-darkest);
@@ -81,7 +87,7 @@ header {
 
 #parallax img {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     pointer-events: none;
@@ -106,7 +112,7 @@ header {
 }
 
 #problema svg {
-    margin-top: -80px;
+    margin-top: -30px;
 }
 
 .problema {
@@ -155,7 +161,7 @@ header {
 
 /* ======== solucao ======== */
 
-#solucao{
+#solucao {
     margin-bottom: 10vh;
 }
 
@@ -185,7 +191,8 @@ header {
 
 .solucao-text {
     width: 45%;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -278,7 +285,7 @@ header {
 
 .card .content {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     padding: 20px;
     page-break-after: 20px;
     text-align: center;
@@ -286,6 +293,7 @@ header {
 
 .card .content p {
     color: var(--background-body-dark);
+    margin-top: 10px;
 }
 
 .card .content a {
@@ -326,9 +334,9 @@ header {
     padding: 3em;
     background-color: var(--background-body-darkest);
 
-    h3,
     p {
         color: var(--color-white);
+        font-size: clamp(1rem, 1vw, 30px);
     }
 }
 
@@ -339,13 +347,15 @@ header {
     border-bottom: 1px solid var(--color-white);
 }
 
-.publico-photo{
+.publico-photo {
     width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .publico-photo img {
-    width: 80%;
+    width: 70%;
 }
 
 
@@ -353,7 +363,7 @@ header {
 
 /* ======== beneficios ======== */
 
-#beneficios{
+#beneficios {
     margin-bottom: 10vh;
 }
 
@@ -364,7 +374,7 @@ header {
 }
 
 .beneficios-container h3 {
-    font-size: 3em;
+    font-size: 3vw;
     text-align: center;
     color: var(--background-body-darkest);
     padding: 0 1rem 1rem 0;
@@ -373,23 +383,27 @@ header {
 }
 
 .beneficios-topicos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .topico {
+    width: 40%;
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: #f4f4f4;
     padding: 2rem;
     margin: 10px;
-    box-shadow: 1px 1px 10px #ccc; 
+    box-shadow: 1px 1px 10px #ccc;
     transition: var(--transition);
 }
 
-.topico:hover{
+.topico:hover {
     transform: scale(1.05);
 }
 
@@ -510,21 +524,133 @@ header {
 /* ======== Media Queries ======== */
 
 @media screen and (max-width: 1200px) {
-    .card {
-        height: 480px;
+
+    /* ======== solucao ======== */
+
+    .solucao-photo img {
+        width: 100%;
     }
 
+    /* ======== fim solucao ======== */
+
+    /* ======== beneficios ======== */
+
+    .beneficios-topicos {
+        width: 90%;
+    }
+
+    /* ======== fim beneficios ======== */
 }
 
-@media screen and (max-width: 992px) {
-    .card {
-        height: 480px; 
-    }
-}
+@media screen and (max-width: 1024px) {
 
-@media screen and (max-width: 768px) {
-    .card {
-        height: 480px; /* Ajuste de altura */
+    /* ======== problema ======== */
+    .problema-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 80px;
     }
 
+    .problema-text {
+        width: 80%;
+    }
+
+    .problema-photo {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /* ======== fim problema ======== */
+
+    /* ======== solucao ======== */
+
+    .solucao-container {
+        padding: 3rem 0;
+        flex-direction: column-reverse;
+    }
+
+    .solucao-text {
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .solucao-text h4 {
+        margin-bottom: -30px;
+    }
+
+    .solucao-photo {
+        width: 70%;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    /* ======== fim solucao ======== */
+
+    /* ======== cards ======== */
+
+    /* ======== fim cards ======== */
+
+
+
+    /* ======== publico ======== */
+
+    #publico {
+        margin-bottom: 20vh;
+    }
+
+    .publico-container {
+        flex-direction: column;
+        height: 120vh;
+    }
+
+    .publico-text {
+        width: 100%;
+    }
+
+    .publico-photo {
+        width: 70%;
+    }
+
+    .publico-photo img {
+        width: 90%;
+    }
+
+    /* ======== fim publico ======== */
+
+    /* ======== beneficios ======== */
+
+    .beneficios-container h3 {
+        font-size: 4vw;
+    }
+
+    .beneficios-topicos {
+        flex-direction: column;
+    }
+
+    .topico {
+        width: 80%;
+    }
+
+    /* ======== fim beneficios ======== */
+
+    /* ======== ajuda ======== */
+
+    #ajuda .problema .problema-photo {
+        margin-bottom: 4rem;
+    }
+
+    /* ======== fim ajuda ======== */
+
+    /* ======== footer ======== */
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+    }
+
+    /* ======== fim footer ======== */
 }
