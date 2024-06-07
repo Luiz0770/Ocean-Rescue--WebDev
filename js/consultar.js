@@ -181,3 +181,8 @@ function deletarObjeto(id) {
         exibirNaTela(listaDeFeedBacks)
     }
 }
+
+function carrosel(idx, indece) {
+    const carroselImgs = document.querySelector(`.container-images${indece}`)
+    carroselImgs.style.transform = `translateX(${-idx * 500}px)`
+}
