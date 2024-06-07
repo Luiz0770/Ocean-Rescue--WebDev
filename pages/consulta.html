@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocean Rescue - Consulta Praia</title>
-    <link rel="stylesheet" href="../css/consulta.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <div class="container-consulta">
+        <header>
+            <h2 class="nav-logo"><img src="../img/logo.svg" alt="Logo da Ocean Rescue"></h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#problema">PROBLEMA</a>
+                <a href="#solucao">SOLUCAO</a>
+                <a href="#objetivos">OBJETIVOS</a>
+                <a href="#beneficios">BENEFICIOS</a>
+                <a href="./pages/consulta.html" class="active">CONSULTAR PRAIA</a>
+            </nav>
+        </header>
+
+        <section id="consulta-info">
+            <div class="container-info">
+                <h2>Consulte o estado da sua praia</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At perferendis itaque sequi temporibus! Blanditiis quo eveniet earum, quidem minima veniam fugiat repellat dolore in suscipit, voluptatibus, praesentium modi quia molestiae commodi vel quaerat! Aliquid corrupti, nihil voluptatem aperiam exercitationem quas.</p>
+            </div>
+        </section>
+
         <section class="section-formulario">
             <form class="container-formulario" data-form>
                 <!-- Input Nome da praia -->
@@ -102,8 +121,36 @@
                 </div> -->
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contato">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../img/logo-light.svg" alt="Logo da Ocean Rescue">
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                    <p><strong>Email:</strong> contato@oceanrescue.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-linkedin .social-icon"></i> Instagram
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-instagram .social-icon"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ocean Rescue. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        <!-- Fim Footer -->
     </div>
-    <script src="../js/consultar.js"></script>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

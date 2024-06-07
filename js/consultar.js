@@ -1,5 +1,7 @@
+//Lista dos feedbacks
 let listaDeFeedBacks = []
 
+//Funcionalidade que guardas os dados do formulario
 const formulario = document.querySelector('[data-form]')
 
 formulario.addEventListener('submit', (event) => {
@@ -38,6 +40,7 @@ formulario.addEventListener('submit', (event) => {
     console.log(listaDeFeedBacks)
 })
 
+//Funcao para exibira os elementos na tela
 function exibirNaTela(lista) {
     const exibir = document.querySelector('.exibir-praias')
     exibir.innerHTML = ''
@@ -46,6 +49,7 @@ function exibirNaTela(lista) {
     })
 }
 
+//Funcao que criar um elemento dinamicamente
 function criarElemento(objeto) {
     let idx = 0;
     
@@ -117,10 +121,12 @@ function criarElemento(objeto) {
     novaPoluica.innerHTML = `Nivel de poluição: ${objeto.poluicao}`
     novoObjeto.appendChild(novaPoluica)
 
+    //Condicao da praia
     const novaCondicao = document.createElement('p')
     novaCondicao.innerHTML = `Condição da praia: ${objeto.condicao}`
     novoObjeto.appendChild(novaCondicao)
 
+    //Qualidade das aguas
     const novaQualidade = document.createElement('p')
     novaQualidade.innerHTML = `Qualidade da agua: ${objeto.qualidade}`
     novoObjeto.appendChild(novaQualidade)
@@ -158,6 +164,7 @@ function criarElemento(objeto) {
     return novoObjeto
 }
 
+//Funcionalidade do alterar o nome da praia do feedback
 function atualizarNome(id) {
     const novoNome = prompt("Digite o novo da praia:");
     
@@ -175,6 +182,7 @@ function atualizarNome(id) {
     }
 }
 
+//Funcionalidade do deletar o feedback
 function deletarObjeto(id) {
     if (confirm("Deseja realmente excluir esse feedback?")) {
         listaDeFeedBacks = listaDeFeedBacks.filter(lista => lista.id != id);
@@ -182,12 +190,14 @@ function deletarObjeto(id) {
     }
 }
 
+//Funcionalidade do carrosel das imagens
 function carrosel(idx, indece) {
     const carroselImgs = document.querySelector(`.container-images${indece}`)
     carroselImgs.style.transform = `translateX(${-idx * 500}px)`
 }
 
 
+//Funcionalidade de pesquisar pelas feedbacks
 const botaoPesquisa = document.querySelector('[data-botaoPesquisa]')
 
 botaoPesquisa.addEventListener('click', () => {
