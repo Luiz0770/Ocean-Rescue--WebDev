@@ -186,3 +186,18 @@ function carrosel(idx, indece) {
     const carroselImgs = document.querySelector(`.container-images${indece}`)
     carroselImgs.style.transform = `translateX(${-idx * 500}px)`
 }
+
+
+const botaoPesquisa = document.querySelector('[data-botaoPesquisa]')
+
+botaoPesquisa.addEventListener('click', () => {
+    const inputPesquisa = document.querySelector('[data-pesquisa]')
+
+    if (inputPesquisa.value != '') {
+        listaFiltrado = listaDeFeedBacks.filter(lista => lista.nome == inputPesquisa.value)
+        exibirNaTela(listaFiltrado)
+    }
+    else {
+        exibirNaTela(listaDeFeedBacks)
+    }
+})
