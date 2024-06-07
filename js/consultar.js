@@ -23,7 +23,6 @@ formulario.addEventListener('submit', (event) => {
     const dataAtual = new Date();
     const dataFormatada = `Data e Hora: ${dataAtual.toLocaleDateString()}, ${dataAtual.toLocaleTimeString()}`
     
-    
     const item = {
         id: listaDeFeedBacks.length,
         nome: inputNome,
@@ -34,6 +33,127 @@ formulario.addEventListener('submit', (event) => {
         qualidade: qualidadeSelect,
     }
 
-    listaDeFeedBacks.push(item)
+    listaDeFeedBacks.unshift(item)
+    exibirNaTela(listaDeFeedBacks)
     console.log(listaDeFeedBacks)
 })
+
+function exibirNaTela(lista) {
+    const exibir = document.querySelector('.exibir-praias')
+    exibir.innerHTML = ''
+    lista.forEach(objeto => {
+        exibir.appendChild(criarElemento(objeto))
+    })
+}
+
+function criarElemento(objeto) {
+    let idx = 0;
+    
+    const novoObjeto = document.createElement('div')
+    novoObjeto.setAttribute('data-id', objeto.id)
+    novoObjeto.classList.add("objeto-carrosel")
+    
+    //Nome da praia
+    const novoNome = document.createElement('h2')
+    novoNome.textContent = objeto.nome
+    novoObjeto.appendChild(novoNome)
+    
+    //Div do carrosel
+    const novoDivCarrosel = document.createElement('div')
+    novoDivCarrosel.classList.add("carrosel")
+    novoObjeto.appendChild(novoDivCarrosel)
+    
+    if (objeto.imagem.length > 1) {
+        const btnVoltar = document.createElement('button')
+        btnVoltar.setAttribute('id', 'prev-img')
+        btnVoltar.textContent = '<'
+        novoDivCarrosel.appendChild(btnVoltar)
+        
+        btnVoltar.addEventListener('click', () => {
+            idx--
+            if (idx < 0) {
+                idx = objeto.imagem.length - 1
+            }
+            carrosel(idx, objeto.id, objeto.imagem)
+        })
+    }
+    
+    //Div do container das imagens
+    const novaDivContainerImagens = document.createElement('div')
+    novaDivContainerImagens.classList.add("container-carrosel")
+    novoDivCarrosel.appendChild(novaDivContainerImagens)
+    
+    //Div do container das imagens
+    const novaDivImagens = document.createElement('div')
+    novaDivImagens.classList.add("container-images")
+    novaDivImagens.classList.add(`container-images${objeto.id}`)
+    novaDivImagens.setAttribute('id', 'images')
+    novaDivContainerImagens.appendChild(novaDivImagens)
+    
+    //Imagens
+    for (i = 0; i < objeto.imagem.length; i++) {
+        const novaImagem = document.createElement('img');
+        novaImagem.setAttribute('src', objeto.imagem[i]);
+        novaDivImagens.appendChild(novaImagem)
+    }
+    
+    if (objeto.imagem.length > 1) {
+        const btnAvancar = document.createElement('button')
+        btnAvancar.setAttribute('id', 'next-img')
+        btnAvancar.textContent = '>'
+        novoDivCarrosel.appendChild(btnAvancar)
+        
+        btnAvancar.addEventListener('click', () => {
+            idx++
+            if (idx > objeto.imagem.length - 1) {
+                idx = 0;
+            }
+            carrosel(idx, objeto.id, objeto.imagem)
+        })
+    }
+    
+    //Nivel de poluicao
+    const novaPoluica = document.createElement('p')
+    novaPoluica.innerHTML = `Nivel de poluição: ${objeto.poluicao}`
+    novoObjeto.appendChild(novaPoluica)
+
+    const novaCondicao = document.createElement('p')
+    novaCondicao.innerHTML = `Condição da praia: ${objeto.condicao}`
+    novoObjeto.appendChild(novaCondicao)
+
+    const novaQualidade = document.createElement('p')
+    novaQualidade.innerHTML = `Qualidade da agua: ${objeto.qualidade}`
+    novoObjeto.appendChild(novaQualidade)
+    
+    //Horario
+    const novoHorario = document.createElement('p');
+    novoHorario.textContent = objeto.horario
+    novoObjeto.appendChild(novoHorario)
+
+    //Div do container dos botoes
+    const novaDivBtns = document.createElement('div')
+    novaDivBtns.classList.add("container-btns")
+    novoObjeto.appendChild(novaDivBtns)
+    
+    //Btn Editar
+    const btnEditar = document.createElement('button');
+    btnEditar.innerHTML = '<i class="fas fa-edit"></i> Editar'
+    btnEditar.classList.add('btn')
+    novaDivBtns.appendChild(btnEditar)
+    
+    btnEditar.addEventListener('click', () => {
+        atualizarTitulo(objeto.id)
+    })
+    
+    //Btn Deletar
+    const btnDeletar = document.createElement('button');
+    btnDeletar.innerHTML = '<i class="fa-solid fa-eraser"></i> Deletar'
+    btnDeletar.classList.add('btn')
+    novaDivBtns.appendChild(btnDeletar)
+    
+    btnDeletar.addEventListener('click', () => {
+        deletarObjeto(objeto.id)
+    })
+    
+    return novoObjeto
+}
