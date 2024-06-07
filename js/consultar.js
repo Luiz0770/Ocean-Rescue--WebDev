@@ -174,3 +174,10 @@ function atualizarNome(id) {
         alert("Digite um texto válido!");
     }
 }
+
+function deletarObjeto(id) {
+    if (confirm("Deseja realmente excluir esse feedback?")) {
+        listaDeFeedBacks = listaDeFeedBacks.filter(lista => lista.id != id);
+        exibirNaTela(listaDeFeedBacks)
+    }
+}
