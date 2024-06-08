@@ -12,80 +12,90 @@
 <body>
     <div class="container-consulta">
         <header>
-            <h2 class="nav-logo"><img src="../img/logo.svg" alt="Logo da Ocean Rescue"></h2>
+            <h2 class="nav-logo"><img src="../img/logo-light.svg" alt="Logo da Ocean Rescue"></h2>
             <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#problema">PROBLEMA</a>
-                <a href="#solucao">SOLUCAO</a>
-                <a href="#objetivos">OBJETIVOS</a>
-                <a href="#beneficios">BENEFICIOS</a>
-                <a href="./pages/consulta.html" class="active">CONSULTAR PRAIA</a>
+                <a href="../index.html">HOME</a>
+                <a href="../index.html#problema">PROBLEMA</a>
+                <a href="../index.html#solucao">SOLUCAO</a>
+                <a href="../index.html#objetivos">OBJETIVOS</a>
+                <a href="../index.html#beneficios">BENEFICIOS</a>
+                <a href="#" class="active">CONSULTAR PRAIA</a>
             </nav>
         </header>
 
         <section id="consulta-info">
             <div class="container-info">
                 <h2>Consulte o estado da sua praia</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At perferendis itaque sequi temporibus! Blanditiis quo eveniet earum, quidem minima veniam fugiat repellat dolore in suscipit, voluptatibus, praesentium modi quia molestiae commodi vel quaerat! Aliquid corrupti, nihil voluptatem aperiam exercitationem quas.</p>
+                <p>Nesta página, você pode consultar o estado da sua praia e enviar feedbacks sobre a qualidade da água,
+                    nível de poluição e condições gerais. Ajude-nos a monitorar e preservar nossos oceanos com suas
+                    observações e informações.</p>
             </div>
         </section>
 
         <section class="section-formulario">
             <form class="container-formulario" data-form>
-                <!-- Input Nome da praia -->
-                <div class="container-inputs">
-                    <label for="Nome"><i class="fa-solid fa-pencil"></i> <strong>Digite o nome da
-                            praia:</strong></label>
-                    <input type="text" name="Nome" data-nome placeholder="Qual é a praia que voce quer relatar?"
-                        required>
-                </div>
-                <!-- Select Nivel de poluicao -->
-                <div class="container-inputs">
-                    <label for="poluicao"><i class="fa-solid fa-list"></i> <strong>Nivel de poluição:</strong></label>
-                    <select name="poluicao" data-poluicao>
-                        <option value="Baixa">Baixa</option>
-                        <option value="Alta">Alta</option>
-                        <option value="Muito Alta">Muito Alta</option>
-                    </select>
-                </div>
-                <!-- Select Condicao da praia -->
-                <div class="container-inputs">
-                    <label for="condicao"><i class="fa-solid fa-list"></i> <strong>Condicao da praia:</strong></label>
-                    <select name="condicao" data-condicao>
-                        <option value="Normal">Normal</option>
-                        <option value="Boa">Boa</option>
-                        <option value="Ruim">Ruim</option>
-                    </select>
-                </div>
-                <!-- Select Qualidade das aguas -->
-                <div class="container-inputs">
-                    <label for="qualidade"><i class="fa-solid fa-list"></i> <strong>Qualidade da agua:</strong></label>
-                    <select name="qualidade" data-qualidade>
-                        <option value="Boa">Boa</option>
-                        <option value="Ruim">Ruim</option>
-                        <option value="Muito Ruim">Muito Ruim</option>
-                    </select>
-                </div>
-                <!-- Input Imagem da praia -->
-                <div class="container-inputs">
-                    <label for="imagem1"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da
-                            praia(URL):</strong></label>
-                    <input type="text" name="imagem1" data-imagem placeholder="Insira a URL aqui" required>
-                </div>
-                <!-- Input Imagem da praia -->
-                <div class="container-inputs">
-                    <label for="imagem2"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da
-                            praia(URL):</strong></label>
-                    <input type="text" name="imagem2" data-imagem placeholder="Insira a URL aqui">
-                </div>
-                <!-- Input Imagem da praia -->
-                <div class="container-inputs">
-                    <label for="imagem3"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da praia
-                            (URL):</strong></label>
-                    <input type="text" name="imagem3" data-imagem placeholder="Insira a URL aqui">
+                <h3>Informa a situacao da sua praia!</h3>
+                <div class="row-container">
+                    <div>
+                        <!-- Input Nome da praia -->
+                        <div class="container-inputs">
+                            <label for="Nome"><i class="fa-solid fa-pencil"></i> <strong>Digite o nome da
+                                    praia:</strong></label>
+                            <input type="text" name="Nome" data-nome placeholder="Qual é a praia que voce quer relatar?"
+                                required>
+                        </div>
+                        <!-- Input Imagem da praia -->
+                        <div class="container-inputs">
+                            <label for="imagem1"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da
+                                    praia(URL):</strong></label>
+                            <input type="text" name="imagem1" data-imagem placeholder="Insira a URL aqui" required>
+                        </div>
+                        <!-- Input Imagem da praia -->
+                        <div class="container-inputs">
+                            <label for="imagem2"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da
+                                    praia(URL):</strong></label>
+                            <input type="text" name="imagem2" data-imagem placeholder="Insira a URL aqui">
+                        </div>
+                        <!-- Input Imagem da praia -->
+                        <div class="container-inputs">
+                            <label for="imagem3"><i class="fa-solid fa-image"></i> <strong>Insira uma imagem da praia
+                                    (URL):</strong></label>
+                            <input type="text" name="imagem3" data-imagem placeholder="Insira a URL aqui">
+                        </div>
+                    </div>
+        
+                    <div>
+                        <div class="container-inputs">
+                            <label for="poluicao"><i class="fa-solid fa-list"></i> <strong>Nivel de poluição:</strong></label>
+                            <select name="poluicao" data-poluicao>
+                                <option value="Baixa">Baixa</option>
+                                <option value="Alta">Alta</option>
+                                <option value="Muito Alta">Muito Alta</option>
+                            </select>
+                        </div>
+                        <!-- Select Condicao da praia -->
+                        <div class="container-inputs">
+                            <label for="condicao"><i class="fa-solid fa-list"></i> <strong>Condicao da praia:</strong></label>
+                            <select name="condicao" data-condicao>
+                                <option value="Normal">Normal</option>
+                                <option value="Boa">Boa</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div>
+                        <!-- Select Qualidade das aguas -->
+                        <div class="container-inputs">
+                            <label for="qualidade"><i class="fa-solid fa-list"></i> <strong>Qualidade da agua:</strong></label>
+                            <select name="qualidade" data-qualidade>
+                                <option value="Boa">Boa</option>
+                                <option value="Ruim">Ruim</option>
+                                <option value="Muito Ruim">Muito Ruim</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <button type="submit" class="btn" data-button><i class="fa-solid fa-bullhorn"></i> Postar</button>
+                <!-- Select Nivel de poluicao -->
+                <button type="submit" class="btn-consulta" data-button><i class="fa-solid fa-bullhorn"></i> Postar</button>
             </form>
         </section>
 
@@ -93,8 +103,10 @@
         <section class="section-posts">
             <div class="container-filter">
                 <label for="Nome"><i class="fa-solid fa-pencil"></i> <strong>Pesquise por sua praia?</strong></label>
-                <input type="text" name="Nome" data-pesquisa placeholder="Que praia voce deseja encontra??">
-                <button class="btn" data-botaoPesquisa><i class="fa-solid fa-bullhorn"></i></button>
+                <div>
+                    <input type="text" name="Nome" data-pesquisa placeholder="Que praia voce deseja encontra??">
+                    <button data-botaoPesquisa><i class="fas fa-search"></i></button>
+                </div>
             </div>
             <div class="exibir-praias">
                 <!-- <div class="objeto-carrosel">
@@ -150,7 +162,7 @@
         <!-- Fim Footer -->
     </div>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/consultar.js"></script>
 </body>
 
 </html>

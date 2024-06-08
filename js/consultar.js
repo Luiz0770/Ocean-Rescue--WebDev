@@ -144,7 +144,7 @@ function criarElemento(objeto) {
     //Btn Editar
     const btnEditar = document.createElement('button');
     btnEditar.innerHTML = '<i class="fas fa-edit"></i> Editar'
-    btnEditar.classList.add('btn')
+    btnEditar.classList.add('btn-consulta')
     novaDivBtns.appendChild(btnEditar)
     
     btnEditar.addEventListener('click', () => {
@@ -154,7 +154,7 @@ function criarElemento(objeto) {
     //Btn Deletar
     const btnDeletar = document.createElement('button');
     btnDeletar.innerHTML = '<i class="fa-solid fa-eraser"></i> Deletar'
-    btnDeletar.classList.add('btn')
+    btnDeletar.classList.add('btn-consulta')
     novaDivBtns.appendChild(btnDeletar)
     
     btnDeletar.addEventListener('click', () => {
